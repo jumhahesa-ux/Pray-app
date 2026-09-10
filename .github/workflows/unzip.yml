@@ -1,0 +1,25 @@
+name: Unzip and commit
+on:
+  workflow_dispatch:
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unzip
+        run: |
+          ZIPFILE=$(find . -maxdepth 1 -name "*.zip" | head -n 1)
+          if [ -z "$ZIPFILE" ]; then
+            echo "No zip file found"
+            exit 1
+          fi
+          unzip -o "$ZIPFILE" -d .
+          rm "$ZIPFILE"
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Extract zip contents via workflow" || echo "No changes to commit"
+          git push
