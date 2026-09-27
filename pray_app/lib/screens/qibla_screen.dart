@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
-import 'package:geolocator/geolocator.dart';
+import '../geolocator_stub.dart';
 import '../theme/app_theme.dart';
 import '../l10n/strings.dart';
 

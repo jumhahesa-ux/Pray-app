@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
+import '../geolocator_stub.dart';
 import 'package:intl/intl.dart';
 import '../theme/app_theme.dart';
 import '../data/prayer_times_calc.dart';
