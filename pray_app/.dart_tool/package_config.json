@@ -93,7 +93,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///workspaces/Pray-app/flutter/packages/flutter",
+      "rootUri": "file:///home/codespace/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.11"
     },
@@ -111,13 +111,13 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///workspaces/Pray-app/flutter/packages/flutter_test",
+      "rootUri": "file:///home/codespace/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.11"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///workspaces/Pray-app/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///home/codespace/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.11"
     },
@@ -411,7 +411,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///workspaces/Pray-app/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///home/codespace/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.11"
     },
@@ -513,8 +513,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.13.3",
-  "flutterRoot": "file:///workspaces/Pray-app/flutter",
-  "flutterVersion": "3.47.4",
+  "generatorVersion": "3.13.4",
+  "flutterRoot": "file:///home/codespace/flutter",
+  "flutterVersion": "3.47.5",
   "pubCache": "file:///home/codespace/.pub-cache"
 }
