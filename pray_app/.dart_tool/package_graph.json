@@ -129,6 +129,37 @@
       "dependencies": []
     },
     {
+      "name": "json_annotation",
+      "version": "4.12.0",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
+      "name": "image",
+      "version": "4.10.1",
+      "dependencies": [
+        "archive"
+      ]
+    },
+    {
+      "name": "cli_util",
+      "version": "0.4.2",
+      "dependencies": [
+        "meta",
+        "path"
+      ]
+    },
+    {
+      "name": "checked_yaml",
+      "version": "2.0.4",
+      "dependencies": [
+        "json_annotation",
+        "source_span",
+        "yaml"
+      ]
+    },
+    {
       "name": "args",
       "version": "2.7.0",
       "dependencies": []
@@ -340,6 +371,14 @@
       ]
     },
     {
+      "name": "archive",
+      "version": "4.3.0",
+      "dependencies": [
+        "path",
+        "posix"
+      ]
+    },
+    {
       "name": "async",
       "version": "2.13.1",
       "dependencies": [
@@ -475,6 +514,15 @@
       ]
     },
     {
+      "name": "posix",
+      "version": "6.5.2",
+      "dependencies": [
+        "ffi",
+        "meta",
+        "path"
+      ]
+    },
+    {
       "name": "vm_service",
       "version": "15.3.0",
       "dependencies": []
@@ -588,54 +636,6 @@
         "collection",
         "meta",
         "pub_semver"
-      ]
-    },
-    {
-      "name": "cli_util",
-      "version": "0.4.2",
-      "dependencies": [
-        "meta",
-        "path"
-      ]
-    },
-    {
-      "name": "checked_yaml",
-      "version": "2.0.4",
-      "dependencies": [
-        "json_annotation",
-        "source_span",
-        "yaml"
-      ]
-    },
-    {
-      "name": "json_annotation",
-      "version": "4.12.0",
-      "dependencies": [
-        "meta"
-      ]
-    },
-    {
-      "name": "image",
-      "version": "4.10.1",
-      "dependencies": [
-        "archive"
-      ]
-    },
-    {
-      "name": "archive",
-      "version": "4.3.0",
-      "dependencies": [
-        "path",
-        "posix"
-      ]
-    },
-    {
-      "name": "posix",
-      "version": "6.5.2",
-      "dependencies": [
-        "ffi",
-        "meta",
-        "path"
       ]
     }
   ],
