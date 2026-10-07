@@ -15,14 +15,14 @@ class TafsirScreen extends StatelessWidget {
         children: [
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(18),
+              padding: EdgeInsets.all(18),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('سورەتی الفاتحة',
+                  Text('سورەتی الفاتحة',
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: AppColors.primaryGreen)),
-                  const SizedBox(height: 10),
-                  Text(alFatihaTafsirBrief, style: const TextStyle(height: 1.7)),
+                  SizedBox(height: 10),
+                  Text(alFatihaTafsirBrief, style: TextStyle(height: 1.7)),
                 ],
               ),
             ),

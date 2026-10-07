@@ -35,7 +35,7 @@ class TajweedScreen extends StatelessWidget {
                         Text(g.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                         const SizedBox(height: 6),
                         Text(g.letters,
-                            style: const TextStyle(fontSize: 24, color: AppColors.primaryGreen)),
+                            style: TextStyle(fontSize: 24, color: AppColors.primaryGreen)),
                         const SizedBox(height: 6),
                         Text(g.description, style: const TextStyle(height: 1.6)),
                       ],

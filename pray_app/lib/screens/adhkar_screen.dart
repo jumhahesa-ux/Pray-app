@@ -59,7 +59,7 @@ class _DhikrCounterCardState extends State<_DhikrCounterCard> {
             children: [
               Text(widget.item.arabic,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 19, color: AppColors.primaryGreen, height: 1.6)),
+                  style: TextStyle(fontSize: 19, color: AppColors.primaryGreen, height: 1.6)),
               const SizedBox(height: 8),
               Text(widget.item.meaning, style: const TextStyle(height: 1.5)),
               if (widget.item.count > 1) ...[

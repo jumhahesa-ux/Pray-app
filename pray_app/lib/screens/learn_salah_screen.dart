@@ -76,7 +76,7 @@ class _StepCard extends StatelessWidget {
             const SizedBox(height: 6),
             Text(step.arabic,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 20, color: AppColors.primaryGreen)),
+                style: TextStyle(fontSize: 20, color: AppColors.primaryGreen)),
           ],
           const SizedBox(height: 8),
           Text(step.description, style: const TextStyle(height: 1.6)),
@@ -91,7 +91,7 @@ class _StepCard extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Icon(Icons.info_outline, size: 18, color: AppColors.gold),
+                  Icon(Icons.info_outline, size: 18, color: AppColors.gold),
                   const SizedBox(width: 6),
                   Expanded(child: Text(step.note!, style: const TextStyle(fontSize: 12.5, height: 1.5))),
                 ],

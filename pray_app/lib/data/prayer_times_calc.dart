@@ -77,7 +77,7 @@ class PrayerTimeCalculator {
 
     // عەسر: کاتێک سێبەری شت یەک+تانجێنتی ڕاستی خۆر (شافیعی/جمهور)
     final lat = _deg2rad(latitude);
-    final asrFactor = 1.0;
+    const asrFactor = 1.0;
     final asrAngleRad = atan(1 / (asrFactor + tan((lat - decl).abs())));
     final asrAltitude = _rad2deg(asrAngleRad);
     final asrMin = timeForAngle(90 - asrAltitude, morning: false);

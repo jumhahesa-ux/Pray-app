@@ -17,18 +17,18 @@ class HadithScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(18),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(colors: [AppColors.primaryGreen, AppColors.deepGreen]),
+              gradient: LinearGradient(colors: [AppColors.primaryGreen, AppColors.deepGreen]),
               borderRadius: BorderRadius.circular(18),
             ),
             child: Column(
               children: [
-                Text(L.t('today_hadith'), style: const TextStyle(color: AppColors.lightGold, fontWeight: FontWeight.bold)),
+                Text(L.t('today_hadith'), style: TextStyle(color: AppColors.lightGold, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 10),
                 Text(today.arabic, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white, fontSize: 19, height: 1.7)),
                 const SizedBox(height: 8),
                 Text(today.translation, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70)),
                 const SizedBox(height: 6),
-                Text('- ${today.source}', style: const TextStyle(color: AppColors.lightGold, fontSize: 12)),
+                Text('- ${today.source}', style: TextStyle(color: AppColors.lightGold, fontSize: 12)),
               ],
             ),
           ),
@@ -42,11 +42,11 @@ class HadithScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(h.arabic, style: const TextStyle(fontSize: 16, color: AppColors.primaryGreen, height: 1.6)),
+                      Text(h.arabic, style: TextStyle(fontSize: 16, color: AppColors.primaryGreen, height: 1.6)),
                       const SizedBox(height: 6),
                       Text(h.translation, style: const TextStyle(height: 1.5)),
                       const SizedBox(height: 4),
-                      Text('- ${h.source}', style: const TextStyle(fontSize: 12, color: AppColors.textMuted)),
+                      Text('- ${h.source}', style: TextStyle(fontSize: 12, color: AppColors.textMuted)),
                     ],
                   ),
                 ),

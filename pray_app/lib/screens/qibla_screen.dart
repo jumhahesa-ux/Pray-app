@@ -63,7 +63,7 @@ class _QiblaScreenState extends State<QiblaScreen> {
 
   double _calculateQiblaBearing(double lat, double lng) {
     final lat1 = lat * pi / 180;
-    final lat2 = _kaabaLat * pi / 180;
+    const lat2 = _kaabaLat * pi / 180;
     final dLng = (_kaabaLng - lng) * pi / 180;
     final y = sin(dLng) * cos(lat2);
     final x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLng);
@@ -93,7 +93,7 @@ class _QiblaScreenState extends State<QiblaScreen> {
                       children: [
                         const Spacer(),
                         Text('${_qiblaBearing!.toStringAsFixed(0)}° لە باکوورەوە',
-                            style: const TextStyle(fontSize: 16, color: AppColors.textMuted)),
+                            style: TextStyle(fontSize: 16, color: AppColors.textMuted)),
                         const SizedBox(height: 30),
                         SizedBox(
                           width: 260,
@@ -112,7 +112,7 @@ class _QiblaScreenState extends State<QiblaScreen> {
                                 angle: angle,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: const [
+                                  children: [
                                     Text('🕋', style: TextStyle(fontSize: 46)),
                                     SizedBox(height: 4),
                                     Icon(Icons.arrow_upward, size: 40, color: AppColors.primaryGreen),
@@ -128,7 +128,7 @@ class _QiblaScreenState extends State<QiblaScreen> {
                           child: Text(
                             L.t('qibla_hint'),
                             textAlign: TextAlign.center,
-                            style: const TextStyle(color: AppColors.textMuted),
+                            style: TextStyle(color: AppColors.textMuted),
                           ),
                         ),
                         const Spacer(),

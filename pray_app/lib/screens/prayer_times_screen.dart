@@ -83,7 +83,7 @@ class _PrayerTimesScreenState extends State<PrayerTimesScreen> {
                   padding: const EdgeInsets.all(16),
                   children: [
                     Text(DateFormat('EEEE، d MMMM yyyy').format(DateTime.now()),
-                        textAlign: TextAlign.center, style: const TextStyle(color: AppColors.textMuted)),
+                        textAlign: TextAlign.center, style: TextStyle(color: AppColors.textMuted)),
                     const SizedBox(height: 16),
                     _timeCard('بانگی بەیانی (فەجر)', _result!.fajr, '🌄'),
                     _timeCard('خۆرهەڵاتن', _result!.sunrise, '☀️'),
@@ -109,7 +109,7 @@ class _PrayerTimesScreenState extends State<PrayerTimesScreen> {
         leading: Text(icon, style: const TextStyle(fontSize: 26)),
         title: Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
         trailing: Text(DateFormat('hh:mm a').format(time),
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primaryGreen)),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primaryGreen)),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import 'settings_screen.dart';
 import '../data/hadiths.dart';
 import '../l10n/strings.dart';
 import 'learn_salah_screen.dart';
@@ -34,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 12),
                 ...AppLanguage.values.map((lang) => ListTile(
                       title: Text(lang.nativeName, textAlign: TextAlign.center),
-                      trailing: L.current == lang ? const Icon(Icons.check, color: AppColors.primaryGreen) : null,
+                      trailing: L.current == lang ? Icon(Icons.check, color: AppColors.primaryGreen) : null,
                       onTap: () {
                         L.set(lang);
                         Navigator.pop(context);
@@ -53,21 +54,22 @@ class HomeScreen extends StatelessWidget {
     final today = hadithOfDay(DateTime.now());
 
     final items = <_HomeItem>[
-      _HomeItem(L.t('learn_salah'), '🕌', AppColors.primaryGreen, const LearnSalahScreen()),
-      _HomeItem(L.t('prayer_times'), '🕐', AppColors.deepGreen, const PrayerTimesScreen()),
-      _HomeItem(L.t('qibla'), '🧭', AppColors.gold, const QiblaScreen()),
-      _HomeItem(L.t('quran'), '📖', AppColors.primaryGreen, const QuranScreen()),
-      _HomeItem(L.t('tafsir'), '📝', AppColors.deepGreen, const TafsirScreen()),
-      _HomeItem(L.t('tajweed'), '🔤', AppColors.gold, const TajweedScreen()),
-      _HomeItem(L.t('daily_hadith'), '💬', AppColors.primaryGreen, const HadithScreen()),
-      _HomeItem(L.t('adhkar'), '📿', AppColors.deepGreen, const AdhkarScreen()),
-      _HomeItem(L.t('asma'), '✨', AppColors.gold, const AsmaScreen()),
+      _HomeItem(L.t('learn_salah'), '🕌', AppColors.primaryGreen, LearnSalahScreen()),
+      _HomeItem(L.t('prayer_times'), '🕐', AppColors.deepGreen, PrayerTimesScreen()),
+      _HomeItem(L.t('qibla'), '🧭', AppColors.gold, QiblaScreen()),
+      _HomeItem(L.t('quran'), '📖', AppColors.primaryGreen, QuranScreen()),
+      _HomeItem(L.t('tafsir'), '📝', AppColors.deepGreen, TafsirScreen()),
+      _HomeItem(L.t('tajweed'), '🔤', AppColors.gold, TajweedScreen()),
+      _HomeItem(L.t('daily_hadith'), '💬', AppColors.primaryGreen, HadithScreen()),
+      _HomeItem(L.t('adhkar'), '📿', AppColors.deepGreen, AdhkarScreen()),
+      _HomeItem(L.t('asma'), '✨', AppColors.gold, AsmaScreen()),
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: Text(L.t('app_name')),
         actions: [
+          IconButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())), icon: const Icon(Icons.settings)),
           IconButton(
             onPressed: () => _showLanguagePicker(context),
             icon: const Icon(Icons.language),
@@ -80,7 +82,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
+              gradient: LinearGradient(
                 colors: [AppColors.primaryGreen, AppColors.deepGreen],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,

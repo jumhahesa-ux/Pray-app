@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'theme_controller.dart';
 
 /// ڕەنگ و شێوازی گشتی ئەپەکە
 /// ڕەنگی سەرەکی: سەوزی ئیسلامی + زێڕی
 class AppColors {
-  static const Color primaryGreen = Color(0xFF0F5132);
-  static const Color deepGreen = Color(0xFF0A3822);
-  static const Color gold = Color(0xFFC9A24B);
-  static const Color lightGold = Color(0xFFF3E7C9);
-  static const Color background = Color(0xFFFAF8F3);
+  static Color get primaryGreen => ThemeController.palette.primary;
+  static Color get deepGreen => ThemeController.palette.deep;
+  static Color get gold => ThemeController.palette.accent;
+  static Color get lightGold => ThemeController.palette.lightAccent;
+  static Color get background => ThemeController.palette.background;
   static const Color cardWhite = Color(0xFFFFFFFF);
   static const Color textDark = Color(0xFF1E2B22);
   static const Color textMuted = Color(0xFF6B7A70);
@@ -51,7 +52,7 @@ class AppTheme {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         margin: EdgeInsets.zero,
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: AppColors.cardWhite,
         selectedItemColor: AppColors.primaryGreen,
         unselectedItemColor: AppColors.textMuted,
@@ -67,7 +68,6 @@ class AppTheme {
           textStyle: GoogleFonts.notoKufiArabic(fontWeight: FontWeight.w600),
         ),
       ),
-      useMaterial3: true,
     );
   }
 }
